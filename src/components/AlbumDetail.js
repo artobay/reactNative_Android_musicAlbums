@@ -2,19 +2,20 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 // AlbumDetail is a presenational component and
 // its using props so it needs to be functional component.
 // we recieved props with name of album and then we go inside that
 // album and get detail for each album.
 
-const AlbumDetail = ({album}) => {
-
+const AlbumDetail = ({ album }) => {
   // using destructuring, means that we are getting these item
   // out from the album object
    const { title, artist, thumbnail_image, image } = album;
 
  return (
   <Card>
+
   <CardSection>
    <View style={styles.thumbnailContainerStyle}>
      <Image
@@ -34,6 +35,11 @@ const AlbumDetail = ({album}) => {
     source={{ uri: image }}
     />
   </CardSection>
+
+   <CardSection>
+    <Button />
+   </CardSection>
+
 
   </Card>
 
