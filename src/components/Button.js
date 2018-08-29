@@ -1,12 +1,14 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-const Button = () => {
+const Button = ({ whenPressed }) => {
+// whenPressed is a prop that we passed from a parent component Button
+// to child component TouchableOpacity 
 
 return (
-  <TouchableOpacity style={styles.buttonStyle}>
+  <TouchableOpacity onPress={whenPressed} style={styles.buttonStyle}>
   <Text style={styles.textStyle}>
-       Click Me! 
+       Click Me!
    </Text>
   </TouchableOpacity>
 
